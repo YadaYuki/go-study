@@ -14,4 +14,12 @@ func main() {
 	fmt.Println(userPointer.ID)
 	userValue := User{1, "user"}
 	fmt.Println(userValue.ID)
+	OverwriteUserInfo(*userPointer, 3)
+	fmt.Println(*userPointer)
+	OverwriteUserInfo(userValue, 2)
+	fmt.Println(userValue)
+}
+
+func OverwriteUserInfo(u User, newId int) {
+	u.ID = newId
 }
